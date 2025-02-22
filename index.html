@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ms">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Laman Pembelajaran Islam</title>
   <!-- Google Fonts: Poppins -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* Gaya Asas */
+    /* Gaya Asas untuk keseluruhan laman */
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
@@ -15,6 +15,34 @@
       background: linear-gradient(135deg, #6d6d6d, #a0a0a0);
       color: #fff;
       line-height: 1.6;
+      text-align: center;
+    }
+    /* Mesej amaran orientasi (dipaparkan jika mod potret) */
+    #rotate-message {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      color: #fff;
+      z-index: 9999;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    #rotate-message h1 {
+      margin-top: 40%;
+      font-size: 24px;
+    }
+    /* Paparkan mesej jika dalam mod potret */
+    @media only screen and (orientation: portrait) {
+      #rotate-message {
+        display: block;
+      }
+      #content {
+        display: none;
+      }
     }
     /* Navigasi */
     nav {
@@ -37,12 +65,12 @@
     nav a:hover {
       color: #fff;
     }
-    /* Seksyen Umum */
+    /* Seksyen umum */
     .section {
       padding: 120px 20px 60px;
       margin-top: 60px;
     }
-    /* Pembungkus Kandungan */
+    /* Pembungkus kandungan */
     .content-wrapper {
       background: rgba(0, 0, 0, 0.75);
       padding: 40px;
@@ -69,7 +97,7 @@
       background-color: #f8d16e;
       color: #000;
     }
-    /* Pembungkus Video */
+    /* Pembungkus video */
     .video-container {
       display: flex;
       flex-wrap: wrap;
@@ -159,7 +187,7 @@
         font-size: 14px;
       }
     }
-    /* Gaya khusus untuk bahagian Definisi */
+    /* Gaya khusus untuk bahagian Definisi guna Google Fonts */
     #definisi .content-wrapper {
       font-family: 'Poppins', sans-serif;
     }
@@ -176,145 +204,166 @@
 </head>
 <body>
 
-  <!-- Navigasi -->
-  <nav>
-    <a href="#pengenalan">Pengenalan</a>
-    <a href="#definisi">Definisi</a>
-    <a href="#objektif">Objektif</a>
-    <a href="#video">Video</a>
-    <a href="#kerangka">Kerangka Projek</a>
-    <a href="#laporan">Laporan Projek</a>
-    <a href="#soalan">Soalan Kuiz</a>
-  </nav>
+  <!-- Mesej amaran orientasi -->
+  <div id="rotate-message">
+    <h1>Sila putar peranti anda ke mod landskap untuk pengalaman terbaik.</h1>
+  </div>
 
-  <!-- Pengenalan -->
-  <section id="pengenalan" class="section">
-    <div class="content-wrapper">
-      <h2>Pengenalan</h2>
-      <p>Laman ini dibina untuk menyediakan video pembelajaran Islam bagi Projek Pendidikan Islam (WI001).</p>
-      
-      <!-- Maklumat Kumpulan -->
-      <h3>Kami dari Kumpulan 4</h3>
-      <p>Ahli yang terlibat:</p>
-      
-      <table class="matrix-table">
-        <tr>
-          <th>Bil</th>
-          <th>Nama</th>
-          <th>No. Matriks</th>
-          <th>Jawatan</th>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>MUHAMMAD ALIF NAQIUDDIN BIN KHAIRUL RAZI</td>
-          <td>MA2411400037</td>
-          <td>KETUA PROJEK</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>MUHAMMAD IFWAT BIN HILMY</td>
-          <td>MA2411100258</td>
-          <td>SETIAUSAHA</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>AHMAD MIQDAD BIN ZAHARI</td>
-          <td>MA2411100282</td>
-          <td>AJK MULTIMEDIA</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>MUHAMMAD NUR JURAIDI BIN ZAINAL</td>
-          <td>MA2411100375</td>
-          <td>AJK DIGITAL</td>
-        </tr>
-      </table>
-    </div>
-  </section>
+  <!-- Kandungan utama laman -->
+  <div id="content">
+    <!-- Navigasi -->
+    <nav>
+      <a href="#pengenalan">Pengenalan</a>
+      <a href="#definisi">Definisi</a>
+      <a href="#objektif">Objektif</a>
+      <a href="#video">Video</a>
+      <a href="#kerangka">Kerangka Projek</a>
+      <a href="#laporan">Laporan Projek</a>
+      <a href="#soalan">Soalan Kuiz</a>
+    </nav>
 
-  <!-- Definisi Ahli Sunnah Wal Jamaah -->
-  <section id="definisi" class="section">
-    <div class="content-wrapper">
-      <h2>Definisi Ahli Sunnah Wal Jamaah</h2>
-      <p>Istilah Ahli Sunnah Wal Jamaah berasal daripada dua perkataan iaitu “ahl al-Sunnah” dan “al-Jamaah” yang merujuk kepada golongan yang mengikuti pegangan Nabi Muhammad s.a.w. serta jalan hidup Baginda dan para sahabat.</p>
-    </div>
-  </section>
+    <!-- Pengenalan -->
+    <section id="pengenalan" class="section">
+      <div class="content-wrapper">
+        <h2>Pengenalan</h2>
+        <p>Laman ini dibina untuk menyediakan video pembelajaran Islam bagi Projek Pendidikan Islam (WI001).</p>
+        
+        <!-- Maklumat Kumpulan -->
+        <h3>Kami dari Kumpulan 4</h3>
+        <p>Ahli yang terlibat:</p>
+        
+        <table class="matrix-table">
+          <tr>
+            <th>Bil</th>
+            <th>Nama</th>
+            <th>No. Matriks</th>
+            <th>Jawatan</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>MUHAMMAD ALIF NAQIUDDIN BIN KHAIRUL RAZI</td>
+            <td>MA2411400037</td>
+            <td>KETUA PROJEK</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>MUHAMMAD IFWAT BIN HILMY</td>
+            <td>MA2411100258</td>
+            <td>SETIAUSAHA</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>AHMAD MIQDAD BIN ZAHARI</td>
+            <td>MA2411100282</td>
+            <td>AJK MULTIMEDIA</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>MUHAMMAD NUR JURAIDI BIN ZAINAL</td>
+            <td>MA2411100375</td>
+            <td>AJK DIGITAL</td>
+          </tr>
+        </table>
+      </div>
+    </section>
 
-  <!-- Objektif -->
-  <section id="objektif" class="section">
-    <div class="content-wrapper">
-      <h2>Objektif</h2>
-      <p><strong>1. Menjelaskan tentang Akidah dan Ajaran Islam.</strong></p>
-      <p><strong>2. Menjelaskan tentang Kepelbagaian Mazhab.</strong></p>
-      <p><strong>3. Menjelaskan tentang Kesatuan dan Keharmonian.</strong></p>
-    </div>
-  </section>
+    <!-- Definisi Ahli Sunnah Wal Jamaah -->
+    <section id="definisi" class="section">
+      <div class="content-wrapper">
+        <h2>Definisi Ahli Sunnah Wal Jamaah</h2>
+        <p>Istilah Ahli Sunnah Wal Jamaah berasal daripada dua perkataan iaitu “ahl al-Sunnah” dan “al-Jamaah” yang merujuk kepada golongan yang mengikuti pegangan Nabi Muhammad s.a.w. serta jalan hidup Baginda dan para sahabat.</p>
+      </div>
+    </section>
 
-  <!-- Video -->
-  <section id="video" class="section">
-    <div class="content-wrapper">
-      <h2>Video Pembelajaran Islam</h2>
-      <div class="video-container">
-        <div class="video">
-  <h3>Akidah dan Ajaran Islam</h3>
-  <!-- Video pertama dengan pautan yang betul -->
-  <iframe src="https://www.youtube.com/embed/R2vsmZ-ZXQ4?si=zmum9QgaRloPMBYt" allowfullscreen></iframe>
-</div>
+    <!-- Objektif -->
+    <section id="objektif" class="section">
+      <div class="content-wrapper">
+        <h2>Objektif</h2>
+        <p><strong>1. Menjelaskan tentang Akidah dan Ajaran Islam.</strong></p>
+        <p><strong>2. Menjelaskan tentang Kepelbagaian Mazhab.</strong></p>
+        <p><strong>3. Menjelaskan tentang Kesatuan dan Keharmonian.</strong></p>
+      </div>
+    </section>
 
-        <div class="video">
-          <h3>Kepelbagaian Mazhab</h3>
-          <!-- Video kedua dengan pautan baru -->
-          <iframe src="https://www.youtube.com/embed/eJMtsvnR2Qg?si=zY5xHBBJOLAyw2u3" allowfullscreen></iframe>
-        </div>
-        <div class="video">
-          <h3>Kesatuan dan Keharmonian</h3>
-          <!-- Sila gantikan VIDEO_ID3 dengan pautan video yang sah -->
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID3" allowfullscreen></iframe>
+    <!-- Video -->
+    <section id="video" class="section">
+      <div class="content-wrapper">
+        <h2>Video Pembelajaran Islam</h2>
+        <div class="video-container">
+          <div class="video">
+            <h3>Akidah dan Ajaran Islam</h3>
+            <!-- Video pertama dengan pautan yang betul -->
+            <iframe src="https://www.youtube.com/embed/R2vsmZ-ZZXQ4?si=zmum9QgaRloPMBYt" allowfullscreen></iframe>
+          </div>
+          <div class="video">
+            <h3>Kepelbagaian Mazhab</h3>
+            <!-- Video kedua dengan pautan baru -->
+            <iframe src="https://www.youtube.com/embed/eJMtsvnR2Qg?si=zY5xHBBJOLAyw2u3" allowfullscreen></iframe>
+          </div>
+          <div class="video">
+            <h3>Kesatuan dan Keharmonian</h3>
+            <!-- Sila gantikan VIDEO_ID3 dengan pautan video yang sah jika ada -->
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID3" allowfullscreen></iframe>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Kerangka Projek -->
-  <section id="kerangka" class="section">
-    <div class="content-wrapper">
-      <h2>Kerangka Projek</h2>
-      <p>Kerangka projek ini merupakan hasil projek pendidikan Islam yang dikembangkan secara berperingkat.</p>
-      <a href="https://drive.google.com/file/d/12NQIYu8fPARDE6FINUsJZmXy9w0nCima/view?usp=sharing" target="_blank" style="color:#f8d16e;">
-        Buka Kerangka Projek (PDF)
-      </a>
-    </div>
-  </section>
-
-  <!-- Laporan Projek -->
-  <section id="laporan" class="section">
-    <div class="content-wrapper">
-      <h2>Laporan Projek</h2>
-      <p>Laporan ini memaparkan hasil projek pembelajaran Islam yang telah kami jalankan.</p>
-      <a href="https://drive.google.com/file/d/YourLaporanFileID/view?usp=sharing" target="_blank" style="color:#f8d16e;">
-        Buka Laporan Projek (PDF)
-      </a>
-    </div>
-  </section>
-
-  <!-- Soalan Kuiz -->
-  <section id="soalan" class="section">
-    <div class="content-wrapper">
-      <h2>Soalan Kuiz: Ahli Sunnah Wal Jamaah</h2>
-      <p>Uji pengetahuan anda mengenai aspek-aspek yang telah disampaikan dalam objektif:</p>
-      <div id="quiz">
-        <div class="question-container" id="question-container">
-          <div class="question" id="question">Soalan akan dipaparkan di sini</div>
-          <ul class="options" id="options"></ul>
-        </div>
-        <button onclick="nextQuestion()" id="next-btn">Seterusnya</button>
-        <button onclick="restartQuiz()" id="restart-btn" style="display:none;">Cuba Lagi</button>
-        <div class="result" id="result"></div>
+    <!-- Kerangka Projek -->
+    <section id="kerangka" class="section">
+      <div class="content-wrapper">
+        <h2>Kerangka Projek</h2>
+        <p>Kerangka projek ini merupakan hasil projek pendidikan Islam yang dikembangkan secara berperingkat.</p>
+        <a href="https://drive.google.com/file/d/12NQIYu8fPARDE6FINUsJZmXy9w0nCima/view?usp=sharing" target="_blank" style="color:#f8d16e;">
+          Buka Kerangka Projek (PDF)
+        </a>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- Laporan Projek -->
+    <section id="laporan" class="section">
+      <div class="content-wrapper">
+        <h2>Laporan Projek</h2>
+        <p>Laporan ini memaparkan hasil projek pembelajaran Islam yang telah kami jalankan.</p>
+        <a href="https://drive.google.com/file/d/YourLaporanFileID/view?usp=sharing" target="_blank" style="color:#f8d16e;">
+          Buka Laporan Projek (PDF)
+        </a>
+      </div>
+    </section>
+
+    <!-- Soalan Kuiz -->
+    <section id="soalan" class="section">
+      <div class="content-wrapper">
+        <h2>Soalan Kuiz: Ahli Sunnah Wal Jamaah</h2>
+        <p>Uji pengetahuan anda mengenai aspek-aspek yang telah disampaikan dalam objektif:</p>
+        <div id="quiz">
+          <div class="question-container" id="question-container">
+            <div class="question" id="question">Soalan akan dipaparkan di sini</div>
+            <ul class="options" id="options"></ul>
+          </div>
+          <button onclick="nextQuestion()" id="next-btn">Seterusnya</button>
+          <button onclick="restartQuiz()" id="restart-btn" style="display:none;">Cuba Lagi</button>
+          <div class="result" id="result"></div>
+        </div>
+      </div>
+    </section>
+  </div> <!-- Tamat #content -->
 
   <script>
+    // Fungsi untuk menyemak orientasi peranti
+    function checkOrientation() {
+      if(window.matchMedia("(orientation: portrait)").matches) {
+        document.getElementById('rotate-message').style.display = 'block';
+        document.getElementById('content').style.display = 'none';
+      } else {
+        document.getElementById('rotate-message').style.display = 'none';
+        document.getElementById('content').style.display = 'block';
+      }
+    }
+    
+    window.addEventListener('load', checkOrientation);
+    window.addEventListener('resize', checkOrientation);
+
     // Senarai soalan (total 15 soalan)
     const questions = [
       {
@@ -482,7 +531,6 @@
     let currentQuestionIndex = 0;
     let score = 0;
 
-    // Fungsi untuk memuatkan soalan
     function loadQuestion() {
       const questionObj = questions[currentQuestionIndex];
       document.getElementById('question').textContent = questionObj.question;
@@ -497,7 +545,6 @@
       });
     }
 
-    // Fungsi untuk memeriksa jawapan
     function checkAnswer(selectedAnswer) {
       const correctAnswer = questions[currentQuestionIndex].answer;
       if (selectedAnswer === correctAnswer) {
@@ -512,21 +559,19 @@
       document.getElementById('next-btn').disabled = false;
     }
 
-    // Fungsi untuk soalan seterusnya
     function nextQuestion() {
       currentQuestionIndex++;
       if (currentQuestionIndex < questions.length) {
         loadQuestion();
         document.getElementById('next-btn').disabled = true;
       } else {
-        document.getElementById('result').textContent = 
+        document.getElementById('result').textContent =
           `Kuiz Selesai! Skor Anda: ${score} / ${questions.length}`;
         document.getElementById('next-btn').style.display = 'none';
         document.getElementById('restart-btn').style.display = 'block';
       }
     }
 
-    // Fungsi untuk mengulangi kuiz
     function restartQuiz() {
       currentQuestionIndex = 0;
       score = 0;
