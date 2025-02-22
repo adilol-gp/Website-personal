@@ -164,7 +164,7 @@
   <section id="pengenalan" class="section">
   <div class="content-wrapper">
     <h2>Pengenalan</h2>
-    <p>Website ini dibuat untuk menyediakan video pembelajaran tentang Islam.</p>
+    <p>Website ini dibuat untuk menyediakan video pembelajaran Ahli Sunnah Wal Jamaah Untuk Projek Pendidikan Islam(WI001).</p>
     
     <!-- Informasi Kumpulan -->
     <h3>Kami dari Kumpulan 4</h3>
