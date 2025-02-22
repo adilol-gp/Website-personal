@@ -227,7 +227,7 @@
   <section id="definisi" class="section">
     <div class="content-wrapper">
       <h2>Definisi Ahli Sunnah Wal Jamaah</h2>
-      <p>Ahli Sunnah Wal Jamaah adalah kelompok umat Islam yang mengikuti ajaran dan praktik berdasarkan Sunnah Nabi Muhammad serta konsensus (ijma') para sahabat. Kelompok ini menekankan pentingnya tauhid, akidah yang benar, dan menjaga kesatuan umat melalui penerapan ajaran Islam yang autentik.</p>
+      <p>Istilah Ahli Sunnah Wal Jamaah berasal daripada dua patah perkataan iaitu “ahl al-Sunnah” dan “al-Jamaah” yang memberi maksud golongan yang mengikuti pegangan Nabi Muhammad s.a.w. atau mengikuti jalan hidup Baginda s.a.w. dan jamaah para sahabat terutamanya para khulafa' alRasyidin yang dididik oleh Baginda s.a.w.</p>
     </div>
   </section>
 
