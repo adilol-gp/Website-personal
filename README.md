@@ -17,6 +17,19 @@
       line-height: 1.6;
       text-align: center;
     }
+    /* Elemen tulisan di tepi kiri, tengah secara menegak */
+    .side-text {
+      position: fixed;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #333;
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 20px;
+      font-family: sans-serif;
+      z-index: 1001;
+    }
     /* Mesej amaran orientasi (dipaparkan jika mod potret) */
     #rotate-message {
       display: none;
@@ -33,9 +46,9 @@
     }
     #rotate-message h1 {
       margin-top: 40%;
-      font-size: 24px;
+      font-size: 26px;
+      font-weight: bold;
     }
-    /* Paparkan mesej jika dalam mod potret */
     @media only screen and (orientation: portrait) {
       #rotate-message {
         display: block;
@@ -65,25 +78,29 @@
     nav a:hover {
       color: #fff;
     }
+    /* Ruang supaya kandungan tidak tersembunyi di bawah navigasi */
+    .spacer {
+      height: 80px;
+    }
     /* Seksyen umum */
     .section {
-      padding: 120px 20px 60px;
-      margin-top: 60px;
+      padding: 80px 20px 60px;
+      margin-top: 20px;
     }
     /* Pembungkus kandungan */
     .content-wrapper {
       background: rgba(0, 0, 0, 0.75);
       padding: 40px;
       border-radius: 10px;
-      margin: 0 auto;
-      max-width: 800px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      margin: 0 auto 40px;
+      max-width: 900px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
     }
     /* Jadual */
     .matrix-table {
       margin: 20px auto;
       border-collapse: collapse;
-      width: 90%;
+      width: 100%;
       max-width: 600px;
     }
     .matrix-table th,
@@ -106,11 +123,15 @@
       margin-top: 20px;
     }
     .video {
-      width: 300px;
+      width: 320px;
       background: #000;
       border-radius: 10px;
       overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.7);
+      transition: transform 0.3s ease;
+    }
+    .video:hover {
+      transform: scale(1.03);
     }
     .video h3 {
       background: #f8d16e;
@@ -134,7 +155,7 @@
       padding: 20px;
       border-radius: 10px;
       margin-bottom: 20px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.7);
     }
     .question-container .question {
       font-weight: bold;
@@ -154,7 +175,7 @@
       transition: background 0.3s ease;
     }
     .options li:hover {
-      background: #666;
+      background: #777;
     }
     /* Butang */
     button {
@@ -209,6 +230,9 @@
     <h1>Sila putar peranti anda ke mod landskap untuk pengalaman terbaik.</h1>
   </div>
 
+  <!-- Elemen tulisan di tepi -->
+  <div class="side-text">Teks Tepi</div>
+
   <!-- Kandungan utama laman -->
   <div id="content">
     <!-- Navigasi -->
@@ -221,17 +245,17 @@
       <a href="#laporan">Laporan Projek</a>
       <a href="#soalan">Soalan Kuiz</a>
     </nav>
+    
+    <!-- Spacer supaya kandungan tidak tersembunyi di bawah navigasi -->
+    <div class="spacer"></div>
 
     <!-- Pengenalan -->
     <section id="pengenalan" class="section">
       <div class="content-wrapper">
         <h2>Pengenalan</h2>
         <p>Laman ini dibina untuk menyediakan video pembelajaran Islam bagi Projek Pendidikan Islam (WI001).</p>
-        
-        <!-- Maklumat Kumpulan -->
         <h3>Kami dari Kumpulan 4</h3>
         <p>Ahli yang terlibat:</p>
-        
         <table class="matrix-table">
           <tr>
             <th>Bil</th>
@@ -347,6 +371,11 @@
         </div>
       </div>
     </section>
+
+    <!-- Ucapan Terima Kasih -->
+    <footer>
+      <p><strong>Terima Kasih kerana sudi melawati laman web kami.</strong></p>
+    </footer>
   </div> <!-- Tamat #content -->
 
   <script>
@@ -360,11 +389,10 @@
         document.getElementById('content').style.display = 'block';
       }
     }
-    
     window.addEventListener('load', checkOrientation);
     window.addEventListener('resize', checkOrientation);
 
-    // Senarai soalan (total 15 soalan)
+    // Senarai soalan kuiz (15 soalan)
     const questions = [
       {
         question: "Apa yang dimaksudkan dengan akidah dalam Islam?",
@@ -587,9 +615,5 @@
     document.getElementById('next-btn').disabled = true;
   </script>
 
-  <!-- Ucapan Terima Kasih -->
-  <footer>
-    <p><strong>Terima Kasih kerana sudi melawati laman web kami.</strong></p>
-  </footer>
 </body>
 </html>
