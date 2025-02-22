@@ -10,7 +10,6 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      text-align: center;
       background: #808080;
       color: #fff;
       line-height: 1.6;
@@ -24,11 +23,11 @@
       left: 0;
       width: 100%;
       z-index: 1000;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     }
     nav a {
       color: #f8d16e;
-      margin: 0 15px;
+      margin: 0 20px;
       text-decoration: none;
       font-weight: bold;
       transition: color 0.3s;
@@ -38,58 +37,35 @@
     }
     /* Section Umum */
     .section {
-      padding: 100px 20px 40px;
+      padding: 120px 20px 60px;
       margin-top: 60px;
     }
     /* Content Wrapper */
     .content-wrapper {
-      background: rgba(0, 0, 0, 0.8);
-      padding: 30px;
+      background: rgba(0, 0, 0, 0.85);
+      padding: 40px;
       border-radius: 10px;
       margin: 0 auto;
       max-width: 800px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     }
-    /* Styling Anggota Tim (tanpa gambar) */
-    .team-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 15px;
-      max-width: 200px;
-      margin: 0 auto;
+    /* Tabel No Matriks */
+    .matrix-table {
+      margin: 20px auto;
+      border-collapse: collapse;
+      width: 90%;
+      max-width: 600px;
     }
-    .team-member {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 18px;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 5px;
-    }
-    .number {
-      font-weight: bold;
-      font-size: 20px;
-    }
-    /* Styling Tombol */
-    button {
-      background: #f8d16e;
-      color: #000;
-      padding: 10px 15px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-    button:hover {
-      background: #e0b85a;
-    }
-    /* Styling Daftar */
-    ol {
-      display: inline-block;
+    .matrix-table th,
+    .matrix-table td {
+      border: 1px solid #ddd;
+      padding: 12px;
       text-align: left;
-      margin-top: 10px;
+      font-size: 16px;
+    }
+    .matrix-table th {
+      background-color: #f8d16e;
+      color: #000;
     }
     /* Video Container */
     .video-container {
@@ -101,13 +77,22 @@
     }
     .video {
       width: 300px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      background: #000;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    .video h3 {
+      background: #f8d16e;
+      color: #000;
+      margin: 0;
+      padding: 10px;
+      font-size: 18px;
     }
     iframe {
       width: 100%;
       height: 200px;
       border: none;
-      border-radius: 5px;
     }
     /* Kuiz */
     #quiz {
@@ -119,19 +104,21 @@
       padding: 20px;
       border-radius: 10px;
       margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     }
     .question-container .question {
       font-weight: bold;
       margin-bottom: 10px;
+      font-size: 18px;
     }
     .options {
       padding: 0;
     }
     .options li {
       list-style: none;
-      padding: 10px;
+      padding: 12px;
       background: #555;
-      margin: 5px 0;
+      margin: 8px 0;
       cursor: pointer;
       border-radius: 5px;
       transition: background 0.3s;
@@ -139,11 +126,27 @@
     .options li:hover {
       background: #666;
     }
+    /* Tombol */
+    button {
+      background: #f8d16e;
+      color: #000;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+      margin: 10px;
+    }
+    button:hover {
+      background: #e0b85a;
+    }
     /* Responsif */
     @media (max-width: 600px) {
       nav a { margin: 0 8px; font-size: 14px; }
-      .video { width: 90%; }
       .content-wrapper { padding: 20px; }
+      .video { width: 90%; }
+      .matrix-table { font-size: 14px; }
     }
   </style>
 </head>
@@ -162,72 +165,49 @@
 
   <!-- Pengenalan -->
   <section id="pengenalan" class="section">
-  <div class="content-wrapper">
-    <h2>Pengenalan</h2>
-    <p>Website ini dibuat untuk menyediakan video pembelajaran Ahli Sunnah Wal Jamaah Untuk Projek Pendidikan Islam(WI001).</p>
-    
-    <!-- Informasi Kumpulan -->
-    <h3>Kami dari Kumpulan 4</h3>
-    <p>Anggota yang terlibat:</p>
-    
-    <table class="matrix-table">
-      <tr>
-        <th>No</th>
-        <th>Nama</th>
-        <th>No.Matriks</th>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>MUHAMMAD ALIF NAQIUDDIN BIN KHAIRUL RAZI</td>
-        <td>MA2411400037</td>
-
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>MUHAMMAD IFWAT BIN HILMY</td>
-        <td>MA2411100258</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>AHMAD MIQDAD BIN ZAHARI</td>
-        <td>MA2411100282</td>
-      </tr>
-      <tr>
-        <td>4</td>
-        <td>MUHAMMAD NUR JURAIDI BIN ZAINAL</td>
-        <td>MA2411100375</td>
-      </tr>
-    </table>
-  </div>
-</section>
-
-<style>
-  .matrix-table {
-    margin: 20px auto;
-    border-collapse: collapse;
-    width: 80%;
-    max-width: 500px;
-  }
-
-  .matrix-table th,
-  .matrix-table td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-  }
-
-  .matrix-table th {
-    background-color: #f8d16e;
-    color: #000;
-  }
-</style>
-
+    <div class="content-wrapper">
+      <h2>Pengenalan</h2>
+      <p>Website ini dibuat untuk menyediakan video pembelajaran Ahli Sunnah Wal Jamaah untuk Projek Pendidikan Islam (WI001).</p>
+      
+      <!-- Informasi Kumpulan -->
+      <h3>Kami dari Kumpulan 4</h3>
+      <p>Anggota yang terlibat:</p>
+      
+      <table class="matrix-table">
+        <tr>
+          <th>No</th>
+          <th>Nama</th>
+          <th>No. Matriks</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>MUHAMMAD ALIF NAQIUDDIN BIN KHAIRUL RAZI</td>
+          <td>MA2411400037</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>MUHAMMAD IFWAT BIN HILMY</td>
+          <td>MA2411100258</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>AHMAD MIQDAD BIN ZAHARI</td>
+          <td>MA2411100282</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>MUHAMMAD NUR JURAIDI BIN ZAINAL</td>
+          <td>MA2411100375</td>
+        </tr>
+      </table>
+    </div>
+  </section>
 
   <!-- Definisi Ahli Sunnah Wal Jamaah -->
   <section id="definisi" class="section">
     <div class="content-wrapper">
       <h2>Definisi Ahli Sunnah Wal Jamaah</h2>
-      <p>Istilah Ahli Sunnah Wal Jamaah berasal daripada dua patah perkataan iaitu “ahl al-Sunnah” dan “al-Jamaah” yang memberi maksud golongan yang mengikuti pegangan Nabi Muhammad s.a.w. atau mengikuti jalan hidup Baginda s.a.w. dan jamaah para sahabat terutamanya para khulafa' alRasyidin yang dididik oleh Baginda s.a.w.</p>
+      <p>Istilah Ahli Sunnah Wal Jamaah berasal daripada dua patah perkataan iaitu “ahl al-Sunnah” dan “al-Jamaah” yang merujuk kepada golongan yang mengikuti pegangan Nabi Muhammad s.a.w. serta jalan hidup Baginda dan para sahabat.</p>
     </div>
   </section>
 
@@ -257,7 +237,7 @@
           <iframe src="https://www.youtube.com/embed/VIDEO_ID2" allowfullscreen></iframe>
         </div>
         <div class="video">
-          <h3>KEsatuan dan Keharmonian</h3>
+          <h3>Kesatuan dan Keharmonian</h3>
           <!-- Ganti VIDEO_ID3 dengan ID video YouTube yang sesuai -->
           <iframe src="https://www.youtube.com/embed/VIDEO_ID3" allowfullscreen></iframe>
         </div>
@@ -269,7 +249,7 @@
   <section id="kerangka" class="section">
     <div class="content-wrapper">
       <h2>Kerangka Projek</h2>
-      <p>Kerangka projek ini hasil projek pendidikan Islam yang dikembangkan secara bertahap.</p>
+      <p>Kerangka projek ini merupakan hasil projek pendidikan Islam yang dikembangkan secara bertahap.</p>
       <a href="https://drive.google.com/file/d/12NQIYu8fPARDE6FINUsJZmXy9w0nCima/view?usp=sharing" target="_blank" style="color:#f8d16e;">
         Buka Kerangka Projek (PDF)
       </a>
@@ -291,7 +271,7 @@
   <section id="soalan" class="section">
     <div class="content-wrapper">
       <h2>Soalan Kuiz: Ahli Sunnah Wal Jamaah</h2>
-      <p>Uji pengetahuan kamu tentang aspek-aspek yang telah disampaikan pada objektif:</p>
+      <p>Uji pengetahuan anda mengenai aspek-aspek yang telah disampaikan pada objektif:</p>
       <div id="quiz">
         <div class="question-container" id="question-container">
           <div class="question" id="question">Pertanyaan akan muncul di sini</div>
