@@ -257,7 +257,7 @@
           <iframe src="https://www.youtube.com/embed/VIDEO_ID2" allowfullscreen></iframe>
         </div>
         <div class="video">
-          <h3>KEsatuan dan Keharmonian</h3>
+          <h3>Kesatuan dan Keharmonian</h3>
           <!-- Ganti VIDEO_ID3 dengan ID video YouTube yang sesuai -->
           <iframe src="https://www.youtube.com/embed/VIDEO_ID3" allowfullscreen></iframe>
         </div>
