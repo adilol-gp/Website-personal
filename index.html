@@ -1,55 +1,57 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="ms">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Website Pembelajaran Islam</title>
+  <title>Laman Pembelajaran Islam</title>
+  <!-- Google Fonts: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* Gaya Dasar */
+    /* Gaya Asas */
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background: #808080;
+      background: linear-gradient(135deg, #6d6d6d, #a0a0a0);
       color: #fff;
       line-height: 1.6;
     }
     /* Navigasi */
     nav {
-      background: rgba(0, 0, 0, 0.9);
+      background: rgba(0, 0, 0, 0.85);
       padding: 15px 0;
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       z-index: 1000;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
     }
     nav a {
       color: #f8d16e;
       margin: 0 20px;
       text-decoration: none;
       font-weight: bold;
-      transition: color 0.3s;
+      transition: color 0.3s ease;
     }
     nav a:hover {
       color: #fff;
     }
-    /* Section Umum */
+    /* Seksyen Umum */
     .section {
       padding: 120px 20px 60px;
       margin-top: 60px;
     }
-    /* Content Wrapper */
+    /* Pembungkus Kandungan */
     .content-wrapper {
-      background: rgba(0, 0, 0, 0.85);
+      background: rgba(0, 0, 0, 0.75);
       padding: 40px;
       border-radius: 10px;
       margin: 0 auto;
       max-width: 800px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     }
-    /* Tabel No Matriks */
+    /* Jadual */
     .matrix-table {
       margin: 20px auto;
       border-collapse: collapse;
@@ -67,7 +69,7 @@
       background-color: #f8d16e;
       color: #000;
     }
-    /* Video Container */
+    /* Pembungkus Video */
     .video-container {
       display: flex;
       flex-wrap: wrap;
@@ -80,7 +82,7 @@
       background: #000;
       border-radius: 10px;
       overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
     }
     .video h3 {
       background: #f8d16e;
@@ -104,7 +106,7 @@
       padding: 20px;
       border-radius: 10px;
       margin-bottom: 20px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
     }
     .question-container .question {
       font-weight: bold;
@@ -121,12 +123,12 @@
       margin: 8px 0;
       cursor: pointer;
       border-radius: 5px;
-      transition: background 0.3s;
+      transition: background 0.3s ease;
     }
     .options li:hover {
       background: #666;
     }
-    /* Tombol */
+    /* Butang */
     button {
       background: #f8d16e;
       color: #000;
@@ -135,7 +137,7 @@
       border-radius: 5px;
       cursor: pointer;
       font-weight: bold;
-      transition: background 0.3s;
+      transition: background 0.3s ease;
       margin: 10px;
     }
     button:hover {
@@ -143,10 +145,32 @@
     }
     /* Responsif */
     @media (max-width: 600px) {
-      nav a { margin: 0 8px; font-size: 14px; }
-      .content-wrapper { padding: 20px; }
-      .video { width: 90%; }
-      .matrix-table { font-size: 14px; }
+      nav a {
+        margin: 0 8px;
+        font-size: 14px;
+      }
+      .content-wrapper {
+        padding: 20px;
+      }
+      .video {
+        width: 90%;
+      }
+      .matrix-table {
+        font-size: 14px;
+      }
+    }
+    /* Gaya khusus untuk bahagian Definisi */
+    #definisi .content-wrapper {
+      font-family: 'Poppins', sans-serif;
+    }
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.85);
+      color: #f8d16e;
+      margin-top: 40px;
+      font-size: 16px;
     }
   </style>
 </head>
@@ -167,37 +191,42 @@
   <section id="pengenalan" class="section">
     <div class="content-wrapper">
       <h2>Pengenalan</h2>
-      <p>Website ini dibuat untuk menyediakan video pembelajaran Ahli Sunnah Wal Jamaah untuk Projek Pendidikan Islam (WI001).</p>
+      <p>Laman ini dibina untuk menyediakan video pembelajaran Islam bagi Projek Pendidikan Islam (WI001).</p>
       
-      <!-- Informasi Kumpulan -->
+      <!-- Maklumat Kumpulan -->
       <h3>Kami dari Kumpulan 4</h3>
-      <p>Anggota yang terlibat:</p>
+      <p>Ahli yang terlibat:</p>
       
       <table class="matrix-table">
         <tr>
-          <th>No</th>
+          <th>Bil</th>
           <th>Nama</th>
           <th>No. Matriks</th>
+          <th>Jawatan</th>
         </tr>
         <tr>
           <td>1</td>
           <td>MUHAMMAD ALIF NAQIUDDIN BIN KHAIRUL RAZI</td>
           <td>MA2411400037</td>
+          <td>KETUA PROJEK</td>
         </tr>
         <tr>
           <td>2</td>
           <td>MUHAMMAD IFWAT BIN HILMY</td>
           <td>MA2411100258</td>
+          <td>SETIAUSAHA</td>
         </tr>
         <tr>
           <td>3</td>
           <td>AHMAD MIQDAD BIN ZAHARI</td>
           <td>MA2411100282</td>
+          <td>AJK MULTIMEDIA</td>
         </tr>
         <tr>
           <td>4</td>
           <td>MUHAMMAD NUR JURAIDI BIN ZAINAL</td>
           <td>MA2411100375</td>
+          <td>AJK DIGITAL</td>
         </tr>
       </table>
     </div>
@@ -207,7 +236,7 @@
   <section id="definisi" class="section">
     <div class="content-wrapper">
       <h2>Definisi Ahli Sunnah Wal Jamaah</h2>
-      <p>Istilah Ahli Sunnah Wal Jamaah berasal daripada dua patah perkataan iaitu “ahl al-Sunnah” dan “al-Jamaah” yang merujuk kepada golongan yang mengikuti pegangan Nabi Muhammad s.a.w. serta jalan hidup Baginda dan para sahabat.</p>
+      <p>Istilah Ahli Sunnah Wal Jamaah berasal daripada dua perkataan iaitu “ahl al-Sunnah” dan “al-Jamaah” yang merujuk kepada golongan yang mengikuti pegangan Nabi Muhammad s.a.w. serta jalan hidup Baginda dan para sahabat.</p>
     </div>
   </section>
 
@@ -215,9 +244,9 @@
   <section id="objektif" class="section">
     <div class="content-wrapper">
       <h2>Objektif</h2>
-      <p>1. Menerangkan tentang akidah dan ajaran Islam.</p>
-      <p>2. Menerangkan tentang kepelbagaian mazhab.</p>
-      <p>3. Menerangkan tentang kesatuan dan keharmonian.</p>
+      <p><strong>1. Menjelaskan tentang Akidah dan Ajaran Islam.</strong></p>
+      <p><strong>2. Menjelaskan tentang Kepelbagaian Mazhab.</strong></p>
+      <p><strong>3. Menjelaskan tentang Kesatuan dan Keharmonian.</strong></p>
     </div>
   </section>
 
@@ -227,18 +256,19 @@
       <h2>Video Pembelajaran Islam</h2>
       <div class="video-container">
         <div class="video">
-          <h3>Akidah dan Ajaran Islam</h3>
-          <!-- Ganti VIDEO_ID1 dengan ID video YouTube yang sesuai -->
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID1" allowfullscreen></iframe>
-        </div>
+  <h3>Akidah dan Ajaran Islam</h3>
+  <!-- Video pertama dengan pautan yang betul -->
+  <iframe src="https://www.youtube.com/embed/R2vsmZ-ZXQ4?si=zmum9QgaRloPMBYt" allowfullscreen></iframe>
+</div>
+
         <div class="video">
           <h3>Kepelbagaian Mazhab</h3>
-          <!-- Ganti VIDEO_ID2 dengan ID video YouTube yang sesuai -->
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID2" allowfullscreen></iframe>
+          <!-- Video kedua dengan pautan baru -->
+          <iframe src="https://www.youtube.com/embed/eJMtsvnR2Qg?si=zY5xHBBJOLAyw2u3" allowfullscreen></iframe>
         </div>
         <div class="video">
           <h3>Kesatuan dan Keharmonian</h3>
-          <!-- Ganti VIDEO_ID3 dengan ID video YouTube yang sesuai -->
+          <!-- Sila gantikan VIDEO_ID3 dengan pautan video yang sah -->
           <iframe src="https://www.youtube.com/embed/VIDEO_ID3" allowfullscreen></iframe>
         </div>
       </div>
@@ -249,7 +279,7 @@
   <section id="kerangka" class="section">
     <div class="content-wrapper">
       <h2>Kerangka Projek</h2>
-      <p>Kerangka projek ini merupakan hasil projek pendidikan Islam yang dikembangkan secara bertahap.</p>
+      <p>Kerangka projek ini merupakan hasil projek pendidikan Islam yang dikembangkan secara berperingkat.</p>
       <a href="https://drive.google.com/file/d/12NQIYu8fPARDE6FINUsJZmXy9w0nCima/view?usp=sharing" target="_blank" style="color:#f8d16e;">
         Buka Kerangka Projek (PDF)
       </a>
@@ -260,7 +290,7 @@
   <section id="laporan" class="section">
     <div class="content-wrapper">
       <h2>Laporan Projek</h2>
-      <p>Laporan ini memaparkan hasil projek pembelajaran Islam yang telah kami kerjakan.</p>
+      <p>Laporan ini memaparkan hasil projek pembelajaran Islam yang telah kami jalankan.</p>
       <a href="https://drive.google.com/file/d/YourLaporanFileID/view?usp=sharing" target="_blank" style="color:#f8d16e;">
         Buka Laporan Projek (PDF)
       </a>
@@ -271,74 +301,74 @@
   <section id="soalan" class="section">
     <div class="content-wrapper">
       <h2>Soalan Kuiz: Ahli Sunnah Wal Jamaah</h2>
-      <p>Uji pengetahuan anda mengenai aspek-aspek yang telah disampaikan pada objektif:</p>
+      <p>Uji pengetahuan anda mengenai aspek-aspek yang telah disampaikan dalam objektif:</p>
       <div id="quiz">
         <div class="question-container" id="question-container">
-          <div class="question" id="question">Pertanyaan akan muncul di sini</div>
+          <div class="question" id="question">Soalan akan dipaparkan di sini</div>
           <ul class="options" id="options"></ul>
         </div>
-        <button onclick="nextQuestion()" id="next-btn">Berikutnya</button>
-        <button onclick="restartQuiz()" id="restart-btn" style="display:none;">Coba Lagi</button>
+        <button onclick="nextQuestion()" id="next-btn">Seterusnya</button>
+        <button onclick="restartQuiz()" id="restart-btn" style="display:none;">Cuba Lagi</button>
         <div class="result" id="result"></div>
       </div>
     </div>
   </section>
 
   <script>
-    // Array pertanyaan dengan total 15 soal
+    // Senarai soalan (total 15 soalan)
     const questions = [
       {
-        question: "Apa yang dimaksud dengan akidah dalam Islam?",
+        question: "Apa yang dimaksudkan dengan akidah dalam Islam?",
         options: [
-          "Sistem kepercayaan dasar dalam Islam",
+          "Sistem kepercayaan asas dalam Islam",
           "Tradisi budaya",
-          "Seni dan arsitektur",
+          "Seni dan seni bina",
           "Cerita rakyat"
         ],
-        answer: "Sistem kepercayaan dasar dalam Islam"
+        answer: "Sistem kepercayaan asas dalam Islam"
       },
       {
         question: "Manakah yang merupakan contoh kepelbagaian mazhab dalam Islam?",
         options: [
           "Mazhab Syafi'i, Maliki, Hanafi, dan Hanbali",
           "Mazhab Barat dan Timur",
-          "Mazhab modern dan tradisional",
+          "Mazhab moden dan tradisional",
           "Mazhab A, B, dan C"
         ],
         answer: "Mazhab Syafi'i, Maliki, Hanafi, dan Hanbali"
       },
       {
-        question: "Mengapa kesatuan dan keharmonian penting dalam Islam?",
+        question: "Mengapakah kesatuan dan keharmonian penting dalam Islam?",
         options: [
-          "Agar umat Islam bisa saling mendukung dan bersatu",
-          "Agar semua negara menggunakan satu bahasa",
-          "Agar ekonomi berkembang",
-          "Agar tradisi berubah"
+          "Supaya umat Islam dapat saling menyokong dan bersatu",
+          "Supaya semua negara menggunakan satu bahasa",
+          "Supaya ekonomi berkembang",
+          "Supaya tradisi berubah"
         ],
-        answer: "Agar umat Islam bisa saling mendukung dan bersatu"
+        answer: "Supaya umat Islam dapat saling menyokong dan bersatu"
       },
       {
-        question: "Bagaimana ajaran Islam menekankan nilai-nilai kesatuan?",
+        question: "Bagaimanakah ajaran Islam menekankan nilai-nilai kesatuan?",
         options: [
-          "Dengan mengutamakan persatuan umat",
-          "Dengan mengutamakan perbedaan budaya",
-          "Dengan memisahkan masyarakat berdasarkan warna",
-          "Dengan menolak perbedaan pendapat"
+          "Dengan mengutamakan perpaduan umat",
+          "Dengan mengutamakan perbezaan budaya",
+          "Dengan memisahkan masyarakat mengikut warna",
+          "Dengan menolak perbezaan pendapat"
         ],
-        answer: "Dengan mengutamakan persatuan umat"
+        answer: "Dengan mengutamakan perpaduan umat"
       },
       {
-        question: "Apa peran utama Al-Qur'an dalam akidah umat Islam?",
+        question: "Apakah peranan utama Al-Qur'an dalam akidah umat Islam?",
         options: [
-          "Sebagai sumber hukum dan pedoman hidup",
-          "Hanya sebagai karya sastra",
+          "Sebagai sumber hukum dan panduan hidup",
+          "Hanya sebagai karya sastera",
           "Sebagai buku sejarah",
           "Sebagai koleksi cerita rakyat"
         ],
-        answer: "Sebagai sumber hukum dan pedoman hidup"
+        answer: "Sebagai sumber hukum dan panduan hidup"
       },
       {
-        question: "Mazhab manakah yang dikenal dengan pendekatan yang lebih fleksibel dalam interpretasi hukum?",
+        question: "Mazhab manakah yang dikenali dengan pendekatan yang lebih fleksibel dalam interpretasi hukum?",
         options: [
           "Mazhab Hanafi",
           "Mazhab Maliki",
@@ -348,106 +378,116 @@
         answer: "Mazhab Hanafi"
       },
       {
-        question: "Apa makna utama dari istilah 'Ummah' dalam konteks kesatuan Islam?",
+        question: "Apakah makna utama istilah 'Ummah' dalam konteks kesatuan Islam?",
         options: [
-          "Komunitas umat Islam di seluruh dunia",
-          "Sebuah kelompok politik",
-          "Sebuah organisasi amal",
+          "Komuniti umat Islam di seluruh dunia",
+          "Sebuah kumpulan politik",
+          "Sebuah organisasi kebajikan",
           "Sebuah sekolah agama"
         ],
-        answer: "Komunitas umat Islam di seluruh dunia"
+        answer: "Komuniti umat Islam di seluruh dunia"
       },
       {
-        question: "Salah satu dasar ajaran akidah adalah tauhid. Apa arti tauhid?",
+        question: "Salah satu asas ajaran akidah ialah tauhid. Apakah maksud tauhid?",
         options: [
           "Mengesakan Allah",
           "Menyembah berhala",
           "Memperbanyak ibadah",
-          "Menghormati nabi-nabi"
+          "Menghormati para nabi"
         ],
         answer: "Mengesakan Allah"
       },
       {
-        question: "Dalam konteks mazhab, apa yang dimaksud dengan ijtihad?",
+        question: "Dalam konteks mazhab, apakah yang dimaksudkan dengan ijtihad?",
         options: [
-          "Proses penalaran dalam hukum Islam",
+          "Proses penaakulan dalam hukum Islam",
           "Sebuah ibadah ritual",
-          "Perayaan hari besar",
-          "Kegiatan sosial"
+          "Sambutan hari besar",
+          "Aktiviti sosial"
         ],
-        answer: "Proses penalaran dalam hukum Islam"
+        answer: "Proses penaakulan dalam hukum Islam"
       },
       {
-        question: "Apa tujuan utama dari penerapan mazhab dalam kehidupan umat Islam?",
+        question: "Apakah tujuan utama pelaksanaan mazhab dalam kehidupan umat Islam?",
         options: [
-          "Untuk mengatur dan memudahkan penerapan syariat",
-          "Untuk membagi umat Islam menjadi kelompok-kelompok kecil",
+          "Untuk mengatur dan memudahkan pelaksanaan syariat",
+          "Untuk membahagikan umat Islam kepada kumpulan-kumpulan kecil",
           "Untuk menimbulkan perpecahan",
-          "Untuk menghancurkan tradisi lama"
+          "Untuk memusnahkan tradisi lama"
         ],
-        answer: "Untuk mengatur dan memudahkan penerapan syariat"
+        answer: "Untuk mengatur dan memudahkan pelaksanaan syariat"
       },
       {
-        question: "Salah satu nilai penting dalam kesatuan Islam adalah ukhuwah. Apa artinya?",
+        question: "Salah satu nilai penting dalam kesatuan Islam ialah ukhuwah. Apakah maksudnya?",
         options: [
           "Persaudaraan",
           "Pertentangan",
-          "Kepemimpinan",
+          "Kepimpinan",
           "Kemewahan"
         ],
         answer: "Persaudaraan"
       },
       {
-        question: "Bagaimana cara ajaran Islam mendorong keharmonian di antara umat?",
+        question: "Bagaimanakah cara ajaran Islam menggalakkan keharmonian di kalangan umat?",
         options: [
           "Dengan menekankan toleransi dan saling menghargai",
-          "Dengan mengutamakan perbedaan",
-          "Dengan membatasi interaksi",
-          "Dengan menetapkan aturan yang kaku"
+          "Dengan mengutamakan perbezaan",
+          "Dengan mengehadkan interaksi",
+          "Dengan menetapkan peraturan yang ketat"
         ],
         answer: "Dengan menekankan toleransi dan saling menghargai"
       },
       {
-        question: "Mengapa penting untuk memahami perbedaan di antara mazhab dalam Islam?",
+        question: "Mengapakah penting untuk memahami perbezaan antara mazhab dalam Islam?",
         options: [
-          "Untuk saling menghormati perbedaan dan mencari titik temu",
-          "Untuk memperkuat perbedaan dan memecah belah",
-          "Untuk menghilangkan seluruh perbedaan",
-          "Untuk meningkatkan persaingan antarmazhab"
+          "Untuk saling menghormati perbezaan dan mencari persamaan",
+          "Untuk menguatkan perbezaan dan memecahbelahkan",
+          "Untuk menghapuskan semua perbezaan",
+          "Untuk meningkatkan persaingan antara mazhab"
         ],
-        answer: "Untuk saling menghormati perbedaan dan mencari titik temu"
+        answer: "Untuk saling menghormati perbezaan dan mencari persamaan"
       },
       {
-        question: "Apa salah satu cara untuk mengaplikasikan akidah dalam kehidupan sehari-hari?",
+        question: "Apakah salah satu cara untuk mengaplikasikan akidah dalam kehidupan seharian?",
         options: [
-          "Dengan selalu mengingat dan mengamalkan ajaran Islam",
+          "Dengan sentiasa mengingati dan mengamalkan ajaran Islam",
           "Dengan mengabaikan perintah agama",
-          "Dengan mengikuti trend modern semata",
+          "Dengan mengikuti trend moden semata-mata",
           "Dengan menolak segala bentuk tradisi"
         ],
-        answer: "Dengan selalu mengingat dan mengamalkan ajaran Islam"
+        answer: "Dengan sentiasa mengingati dan mengamalkan ajaran Islam"
       },
       {
-        question: "Dalam ajaran Islam, bagaimana peran ilmu pengetahuan terkait dengan akidah?",
+        question: "Mengapakah penting bagi umat Islam menghormati perbezaan mazhab demi mencapai kesatuan umat?",
         options: [
-          "Ilmu pengetahuan mendukung pemahaman yang lebih dalam tentang ajaran Islam",
-          "Ilmu pengetahuan tidak ada hubungannya dengan agama",
-          "Ilmu pengetahuan menggantikan peran agama",
+          "Kerana menghargai perbezaan akan menguatkan solidariti dan saling memahami",
+          "Kerana semua mazhab mempunyai peraturan yang sama",
+          "Kerana perbezaan mazhab tidak bernilai",
+          "Kerana hanya satu mazhab yang benar"
+        ],
+        answer: "Kerana menghargai perbezaan akan menguatkan solidariti dan saling memahami"
+      },
+      {
+        question: "Dalam ajaran Islam, bagaimanakah peranan ilmu pengetahuan berkaitan dengan akidah?",
+        options: [
+          "Ilmu pengetahuan menyokong pemahaman yang lebih mendalam tentang ajaran Islam",
+          "Ilmu pengetahuan tidak berkaitan dengan agama",
+          "Ilmu pengetahuan menggantikan peranan agama",
           "Ilmu pengetahuan hanya untuk kepentingan duniawi"
         ],
-        answer: "Ilmu pengetahuan mendukung pemahaman yang lebih dalam tentang ajaran Islam"
+        answer: "Ilmu pengetahuan menyokong pemahaman yang lebih mendalam tentang ajaran Islam"
       }
     ];
 
     let currentQuestionIndex = 0;
     let score = 0;
 
-    // Fungsi untuk memuat pertanyaan
+    // Fungsi untuk memuatkan soalan
     function loadQuestion() {
       const questionObj = questions[currentQuestionIndex];
       document.getElementById('question').textContent = questionObj.question;
       const optionsList = document.getElementById('options');
-      optionsList.innerHTML = ''; // Reset opsi
+      optionsList.innerHTML = ''; // Reset pilihan
 
       questionObj.options.forEach(option => {
         const li = document.createElement('li');
@@ -457,22 +497,22 @@
       });
     }
 
-    // Fungsi untuk mengecek jawaban
+    // Fungsi untuk memeriksa jawapan
     function checkAnswer(selectedAnswer) {
       const correctAnswer = questions[currentQuestionIndex].answer;
       if (selectedAnswer === correctAnswer) {
         score++;
       }
-      // Nonaktifkan semua opsi setelah dijawab
+      // Lumpuhkan semua pilihan selepas dijawab
       const options = document.querySelectorAll('.options li');
       options.forEach(option => {
         option.style.pointerEvents = 'none';
       });
-      // Aktifkan tombol berikutnya
+      // Aktifkan butang seterusnya
       document.getElementById('next-btn').disabled = false;
     }
 
-    // Fungsi untuk pertanyaan selanjutnya
+    // Fungsi untuk soalan seterusnya
     function nextQuestion() {
       currentQuestionIndex++;
       if (currentQuestionIndex < questions.length) {
@@ -480,13 +520,13 @@
         document.getElementById('next-btn').disabled = true;
       } else {
         document.getElementById('result').textContent = 
-          `Kuiz Selesai! Skor Kamu: ${score} / ${questions.length}`;
+          `Kuiz Selesai! Skor Anda: ${score} / ${questions.length}`;
         document.getElementById('next-btn').style.display = 'none';
         document.getElementById('restart-btn').style.display = 'block';
       }
     }
 
-    // Fungsi untuk mengulang kuiz
+    // Fungsi untuk mengulangi kuiz
     function restartQuiz() {
       currentQuestionIndex = 0;
       score = 0;
@@ -497,9 +537,14 @@
       document.getElementById('next-btn').disabled = true;
     }
 
-    // Muat pertanyaan pertama saat halaman dibuka
+    // Muatkan soalan pertama semasa laman dimuatkan
     loadQuestion();
     document.getElementById('next-btn').disabled = true;
   </script>
+
+  <!-- Ucapan Terima Kasih -->
+  <footer>
+    <p><strong>Terima Kasih kerana sudi melawati laman web kami.</strong></p>
+  </footer>
 </body>
 </html>
