@@ -247,17 +247,17 @@
       <h2>Video Pembelajaran Islam</h2>
       <div class="video-container">
         <div class="video">
-          <h3>Video 1</h3>
+          <h3>Akidah dan Ajaran Islam</h3>
           <!-- Ganti VIDEO_ID1 dengan ID video YouTube yang sesuai -->
           <iframe src="https://www.youtube.com/embed/VIDEO_ID1" allowfullscreen></iframe>
         </div>
         <div class="video">
-          <h3>Video 2</h3>
+          <h3>Kepelbagaian Mazhab</h3>
           <!-- Ganti VIDEO_ID2 dengan ID video YouTube yang sesuai -->
           <iframe src="https://www.youtube.com/embed/VIDEO_ID2" allowfullscreen></iframe>
         </div>
         <div class="video">
-          <h3>Video 3</h3>
+          <h3>KEsatuan dan Keharmonian</h3>
           <!-- Ganti VIDEO_ID3 dengan ID video YouTube yang sesuai -->
           <iframe src="https://www.youtube.com/embed/VIDEO_ID3" allowfullscreen></iframe>
         </div>
@@ -269,7 +269,7 @@
   <section id="kerangka" class="section">
     <div class="content-wrapper">
       <h2>Kerangka Projek</h2>
-      <p>Kerangka projek ini mencakup berbagai aspek pendidikan Islam yang dikembangkan secara bertahap.</p>
+      <p>Kerangka projek ini hasil projek pendidikan Islam yang dikembangkan secara bertahap.</p>
       <a href="https://drive.google.com/file/d/12NQIYu8fPARDE6FINUsJZmXy9w0nCima/view?usp=sharing" target="_blank" style="color:#f8d16e;">
         Buka Kerangka Projek (PDF)
       </a>
@@ -280,7 +280,7 @@
   <section id="laporan" class="section">
     <div class="content-wrapper">
       <h2>Laporan Projek</h2>
-      <p>Laporan ini memaparkan hasil dan evaluasi projek pembelajaran Islam yang telah kami kerjakan.</p>
+      <p>Laporan ini memaparkan hasil projek pembelajaran Islam yang telah kami kerjakan.</p>
       <a href="https://drive.google.com/file/d/YourLaporanFileID/view?usp=sharing" target="_blank" style="color:#f8d16e;">
         Buka Laporan Projek (PDF)
       </a>
